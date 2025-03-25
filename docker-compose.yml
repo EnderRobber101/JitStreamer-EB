@@ -9,10 +9,11 @@ services:
         environment:
             - RUST_LOG=info
             - RUNNER_COUNT=1
+            - ALLOW_REGISTRATION=2
         cap_add:
             - NET_ADMIN
         devices:
             - /dev/net/tun:/dev/net/tun
-        image: jkcoxson/jitstreamer-eb:latest
+        image: ghcr.io/jkcoxson/jitstreamer-eb:latest
         restart: unless-stopped
 
